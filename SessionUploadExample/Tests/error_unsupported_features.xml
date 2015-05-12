@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PanoptoSession xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://panopto.com/PanoptoSession/v1">
+  <Title>Session with unsupported features</Title>
+  <Description>This session specifies unsupported features and should fail to process</Description>
+  <Date>2015-01-15T00:00:00.000-00:00</Date>
+  <Videos>
+    <Video>
+      <Start>PT0S</Start>
+      <Filename>wildlife.wmv</Filename>
+      <Cuts/>
+      <TableOfContents/>
+      <Type>Primary</Type>
+      <Transcripts/>
+    </Video>
+  </Videos>
+  <Presentations/>
+  <Cuts/>
+  <Tags>
+    <Tag>Feature not yet supported</Tag>
+  </Tags>
+</PanoptoSession>

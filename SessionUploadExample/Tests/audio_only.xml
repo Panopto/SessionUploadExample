@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PanoptoSession xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://panopto.com/PanoptoSession/v1">
+  <Title>Cripple Creek Banjo Song</Title>
+  <Description>Cripple Creek being played on a clawhammer banjo</Description>
+  <Date>2015-01-15T00:00:00.000-00:00</Date>
+  <Videos>
+    <Video>
+      <Start>PT0S</Start>
+      <Filename>song.mp3</Filename>
+      <Cuts/>
+      <TableOfContents>
+        <Entry>
+          <Title>Start of the song - A section</Title>
+          <Description/>
+          <Url/>
+          <Time>PT0S</Time>
+        </Entry>
+        <Entry>
+          <Title>Repeat A section</Title>
+          <Description/>
+          <Url/>
+          <Time>PT11S</Time>
+        </Entry>
+        <Entry>
+          <Title>B section</Title>
+          <Description/>
+          <Url/>
+          <Time>PT19S</Time>
+        </Entry>
+        <Entry>
+          <Title>Repeat B section</Title>
+          <Description/>
+          <Url/>
+          <Time>PT26S</Time>
+        </Entry>
+        <Entry>
+          <Title>Repeat whole song (A A B B)</Title>
+          <Description/>
+          <Url/>
+          <Time>PT35S</Time>
+        </Entry>
+      </TableOfContents>
+      <Type>Audio</Type>
+      <Transcripts/>
+    </Video>
+  </Videos>
+  <Presentations/>
+  <Cuts/>
+</PanoptoSession>

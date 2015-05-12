@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PanoptoSession xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://panopto.com/PanoptoSession/v1">
+  <Title>Wildlife video, video only</Title>
+  <Description>Wildlife video</Description>
+  <Date>2015-01-15T00:00:00.000-00:00</Date>
+  <Videos>
+    <Video>
+      <Start>PT0S</Start>
+      <Filename>wildlife.wmv</Filename>
+      <Cuts/>
+      <TableOfContents>
+        <Entry>
+          <Title>Primary video</Title>
+          <Description/>
+          <Url/>
+          <Time>PT0S</Time>
+        </Entry>
+      </TableOfContents>
+      <Type>Primary</Type>
+      <Transcripts/>
+    </Video>
+  </Videos>
+  <Presentations/>
+  <Cuts/>
+</PanoptoSession>

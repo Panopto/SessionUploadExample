@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ArrayOfTupleOfstringSessionUploadDOdQ95T2 xmlns="http://schemas.datacontract.org/2004/07/System" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <TupleOfstringSessionUploadDOdQ95T2>
+    <m_Item1>audio_only.xml</m_Item1>
+    <m_Item2 xmlns:a="http://schemas.datacontract.org/2004/07/SessionUploadExample">
+      <a:ID>6ddfb573-3d2a-404b-b679-092608fdb9cb</a:ID>
+      <a:State>Complete</a:State>
+      <a:UploadTarget>http://localhost/Panopto/Upload/86cb20c2-a0a1-4c24-94c7-3a75532816df</a:UploadTarget>
+    </m_Item2>
+  </TupleOfstringSessionUploadDOdQ95T2>
+  <TupleOfstringSessionUploadDOdQ95T2>
+    <m_Item1>error_corrupt_video.xml</m_Item1>
+    <m_Item2 xmlns:a="http://schemas.datacontract.org/2004/07/SessionUploadExample">
+      <a:ID>3588ea3f-82ca-4584-9843-f8e03292222b</a:ID>
+      <a:State>ProcessingError</a:State>
+      <a:UploadTarget>http://localhost/Panopto/Upload/507f76df-d7be-4ce1-89e0-a3d87b32a8bc</a:UploadTarget>
+    </m_Item2>
+  </TupleOfstringSessionUploadDOdQ95T2>
+  <TupleOfstringSessionUploadDOdQ95T2>
+    <m_Item1>error_missing_files.xml</m_Item1>
+    <m_Item2 xmlns:a="http://schemas.datacontract.org/2004/07/SessionUploadExample">
+      <a:ID>501068a3-5388-48ba-bee5-a79219fe0e8f</a:ID>
+      <a:State>ProcessingError</a:State>
+      <a:UploadTarget>http://localhost/Panopto/Upload/232c6e24-edc5-4496-b559-24dace869e67</a:UploadTarget>
+    </m_Item2>
+  </TupleOfstringSessionUploadDOdQ95T2>
+  <TupleOfstringSessionUploadDOdQ95T2>
+    <m_Item1>error_unsupported_features.xml</m_Item1>
+    <m_Item2 xmlns:a="http://schemas.datacontract.org/2004/07/SessionUploadExample">
+      <a:ID>bb586ece-8d96-4966-a26c-2b4b40f6aad5</a:ID>
+      <a:State>Complete</a:State>
+      <a:UploadTarget>http://localhost/Panopto/Upload/dd47a8c8-683c-4423-a013-6e311465be49</a:UploadTarget>
+    </m_Item2>
+  </TupleOfstringSessionUploadDOdQ95T2>
+  <TupleOfstringSessionUploadDOdQ95T2>
+    <m_Item1>ppt_only.xml</m_Item1>
+    <m_Item2 xmlns:a="http://schemas.datacontract.org/2004/07/SessionUploadExample">
+      <a:ID>f91a400c-6930-469d-aacf-d1b54cb719f1</a:ID>
+      <a:State>Complete</a:State>
+      <a:UploadTarget>http://localhost/Panopto/Upload/683c29bb-2a5a-4b03-ad40-a5918f1a0cb4</a:UploadTarget>
+    </m_Item2>
+  </TupleOfstringSessionUploadDOdQ95T2>
+  <TupleOfstringSessionUploadDOdQ95T2>
+    <m_Item1>primary_and_secondary_videos_and_ppt_and_cuts.xml</m_Item1>
+    <m_Item2 xmlns:a="http://schemas.datacontract.org/2004/07/SessionUploadExample">
+      <a:ID>561339f5-9461-4212-a483-35a2722e01be</a:ID>
+      <a:State>Complete</a:State>
+      <a:UploadTarget>http://localhost/Panopto/Upload/22b072d0-228c-4016-b305-c6cfff97a838</a:UploadTarget>
+    </m_Item2>
+  </TupleOfstringSessionUploadDOdQ95T2>
+</ArrayOfTupleOfstringSessionUploadDOdQ95T2>

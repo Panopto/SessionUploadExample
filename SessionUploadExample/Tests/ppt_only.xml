@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PanoptoSession xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://panopto.com/PanoptoSession/v1">
+  <Title>A PPT only session</Title>
+  <Description>This session is valid but incomplete because it does not yet have a video</Description>
+  <Date>2015-01-15T00:00:00.000-00:00</Date>
+  <Videos/>
+  <Presentations>
+    <Presentation>
+      <Start>PT0S</Start>
+      <Filename>test.pptx</Filename>
+      <SlideChanges>
+        <SlideChange>
+          <Title>Title slide</Title>
+          <Description/>
+          <Url/>
+          <Time>PT0S</Time>
+          <SlideNumber>1</SlideNumber>
+        </SlideChange>
+        <SlideChange>
+          <Title>A picture of a dog</Title>
+          <Description/>
+          <Url/>
+          <Time>PT15S</Time>
+          <SlideNumber>2</SlideNumber>
+        </SlideChange>
+      </SlideChanges>
+    </Presentation>
+  </Presentations>
+  <Cuts/>
+</PanoptoSession>

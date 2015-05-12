@@ -1,0 +1,2 @@
+..\bin\Debug\SessionUploadExample.exe -serverDns:localhost -username:admin -password:panopto123 -directory:. -output:results.txt -continueOnError:true -ignoreSSLErrors:true
+fc results.txt expected_results.txt

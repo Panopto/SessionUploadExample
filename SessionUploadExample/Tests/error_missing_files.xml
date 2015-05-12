@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PanoptoSession xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://panopto.com/PanoptoSession/v1">
+  <Title>Refers to missing files test</Title>
+  <Description>This session refers to multiple video files, one of which does not exist</Description>
+  <Date>2015-01-15T00:00:00.000-00:00</Date>
+  <Videos>
+    <Video>
+      <Start>PT0S</Start>
+      <Filename>wildlife.wmv</Filename>
+      <Cuts/>
+      <TableOfContents/>
+      <Type>Primary</Type>
+      <Transcripts/>
+    </Video>
+    <Video>
+      <Start>PT0S</Start>
+      <Filename>missing.wmv</Filename>
+      <Cuts/>
+      <TableOfContents/>
+      <Type>Secondary</Type>
+      <Transcripts/>
+    </Video>
+  </Videos>
+  <Presentations>
+    <Presentation>
+      <Start>PT0S</Start>
+      <Filename>missing.ppt</Filename>
+      <SlideChanges/>
+    </Presentation>
+  </Presentations>
+  <Images/>
+  <Cuts/>
+  <Tags/>
+  <Extensions/>
+  <Attachments/>
+</PanoptoSession>
