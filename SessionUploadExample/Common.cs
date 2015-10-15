@@ -94,7 +94,7 @@ namespace SessionUploadExample
 
             // set up the request
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(
-                "https://" + serverDns + "/Panopto/PublicAPISSL/4.2/Auth.svc");
+                "https://" + serverDns + "/Panopto/PublicAPI/4.2/Auth.svc");
 
             request.Headers.Add("SOAPAction", "http://tempuri.org/IAuth/LogOnWithPassword");
 
