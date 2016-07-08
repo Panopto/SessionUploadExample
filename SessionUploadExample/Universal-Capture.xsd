@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+  targetNamespace="http://panopto.com/PanoptoSession/v1"
+  elementFormDefault="qualified"
+  xmlns="http://tempuri.org/XMLSchema.xsd"
+  xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  version="1.0">
+  
+  <!-- Describes a collection of playable content on a single timeline for uploading to a Panopto server. -->
+  <xs:element name="PanoptoSession">
+    <xs:complexType>
+      <xs:all>
+        <!-- The name of the session. -->
+        <xs:element type="xs:string" name="Title"/>
+        
+        <!-- A paragraph describing the session contents in detail. -->
+        <xs:element type="xs:string" name="Description"/>
+        
+        <!-- The date the session was created. -->
+        <xs:element type="xs:dateTime" name="Date"/>
+        
+        <!-- Video streams in this session. -->
+        <xs:element name="Videos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Video" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    
+                    <!-- The time at which this video starts relative to session start. Determines its position on the timeline. -->
+                    <xs:element type="xs:duration" name="Start"/>
+                    
+                    <!-- The filename of the video. Must match exactly to a video filename uploaded in the same directory as this XML. -->
+                    <xs:element name="Filename" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <!-- For convenience, not used by the server, a full path to the file on disk. -->
+                            <xs:attribute type="xs:string" name="LocalFilename" use="optional"/>
+                            <!-- Bit rate of the media file-->
+                            <xs:attribute type="xs:integer" name="Bitrate" use="optional"/>
+                            <!-- File Extension of the media file -->
+                            <xs:attribute type="xs:string" name="Type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- A collection of ranges of video to omit from the final playable session. -->
+                    <xs:element name="Cuts">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Cut" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <!-- The start time of the range to cut relative to the video start. -->
+                                <xs:element type="xs:duration" name="Start"/>
+
+                                <!-- The duration of the range to cut. -->
+                                <xs:element type="xs:duration" name="Duration"/>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- A collection of timed entries in the session for navigation and search discovery. -->
+                    <xs:element name="TableOfContents">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Entry" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                
+                                <!-- A title for the table of contents entry to be displayed in a list. -->
+                                <xs:element type="xs:string" name="Title"/>
+
+                                <!-- A paragraph of additional text to include with this table of contents entry. -->
+                                <xs:element type="xs:string" name="Description" minOccurs="0"/>
+                                
+                                <!-- A url to associate with this entry. -->
+                                <xs:element type="xs:anyURI" name="Url" minOccurs="0"/>
+                                
+                                <!-- The time relative to the start of the video where this entry occurs. -->
+                                <xs:element type="xs:duration" name="Time"/>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- Describes where the video should be positioned for viewers. -->
+                    <xs:element name="Type">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          
+                          <!-- Positions the video to the left side of the viewer in a smaller window. -->
+                          <xs:enumeration value="Primary"/>
+
+                          <!-- Positions the video to the right side of the viewer in a larger window. -->
+                          <xs:enumeration value="Secondary"/>
+                          
+                          <!-- An audio only recording. -->
+                          <xs:enumeration value="Audio"/>
+                        </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+
+                    <!-- Transcripts of this stream for closed captioning and search. Must refer to a video file uploaded with this XML. -->
+                    <xs:element name="Transcripts">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Transcript" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+
+                                <!-- The filename of the transcript. Must match exactly to a transcript filename uploaded in the same directory as this XML. -->
+                                <xs:element name="Filename">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <!-- For convenience, not used by the server, a full path to the file on disk. -->
+                                        <xs:attribute type="xs:string" name="LocalFilename" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+
+                                <!-- The language the transcript is in. Allows for multiple transcripts in different languages. -->
+                                <xs:element type="xs:string" name="LCID"/>
+                                  
+                                <!-- Describe which service the captions came from. -->
+                                <xs:element type="xs:string" name="Source" minOccurs="0"/>
+
+                                <!-- Controls whether the captions can be displayed in closed captioning or if it is only suitable for search. -->
+                                <xs:element type="xs:boolean" name="Visible" default="true" minOccurs="0"/>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <!-- Slide shows presented in this session. -->
+        <xs:element name="Presentations">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Presentation" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    
+                    <!-- The time at which this presentation starts relative to session start. Determines its position on the timeline. -->
+                    <xs:element type="xs:duration" name="Start"/>
+
+                    <!-- The filename of the presentation. Must match exactly to a presentation filename uploaded in the same directory as this XML. -->
+                    <xs:element name="Filename">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <!-- For convenience, not used by the server, a full path to the file on disk. -->
+                            <xs:attribute type="xs:string" name="LocalFilename" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- A collection of transitions to slides on the session timeline. -->
+                    <xs:element name="SlideChanges">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SlideChange" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <!-- A title for the slide change to be displayed in the table of contents list. -->
+                                <xs:element type="xs:string" name="Title"/>
+
+                                <!-- A paragraph of additional text to include with this slide. Usually the full slide text. -->
+                                <xs:element type="xs:string" name="Description" minOccurs="0"/>
+
+                                <!-- A url to associate with this entry. -->
+                                <xs:element type="xs:anyURI" name="Url" minOccurs="0"/>
+                                
+                                <!-- The time relative to the start of the presentation where this slide change occurs. -->
+                                <xs:element type="xs:duration" name="Time"/>
+                              
+                                <!-- The 1-based slide index in the presentation of the slide shown by this slide change. -->
+                                <xs:element type="xs:integer" name="SlideNumber"/>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Static images shown in this session. -->
+        <xs:element name="Images" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Image" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    
+                    <!-- The filename of the image. Must match exactly to an image filename uploaded in the same directory as this XML. -->
+                    <xs:element name="Filename">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            
+                            <!-- For convenience, not used by the server, a full path to the file on disk. -->
+                            <xs:attribute type="xs:string" name="LocalFilename" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- A title for the image in the table of contents list. -->
+                    <xs:element type="xs:string" name="Title"/>
+
+                    <!-- A paragraph of additional text to include with this image. -->
+                    <xs:element type="xs:string" name="Description" minOccurs="0"/>
+
+                    <!-- A url to associate with this entry. -->
+                    <xs:element type="xs:anyURI" name="Url" minOccurs="0"/>
+                    
+                    <!-- The time relative to the start of the session where this image should be shown. -->
+                    <xs:element type="xs:duration" name="Time"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- A collection of ranges of the entire session to omit from the final playable output. -->
+        <xs:element name="Cuts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cut" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    <!-- The start time of the range to cut relative to the session start. -->
+                    <xs:element type="xs:duration" name="Start"/>
+
+                    <!-- The duration of the range to cut. -->
+                    <xs:element type="xs:duration" name="Duration"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- A collection of strings associated with the session for categorization purposes. -->
+        <xs:element name="Tags" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Tag" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- A collection of name and value pairs associated with the session for extensibility purposes. -->
+        <xs:element name="Extensions" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Extension" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element type="xs:string" name="Name"/>
+                    <xs:element type="xs:string" name="Value"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Any additional file attachments to include with this session. -->
+        <xs:element name="Attachments" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Attachment" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+
+                    <!-- The filename of the attachment. Must match exactly to a attachment filename uploaded in the same directory as this XML. -->
+                    <xs:element name="Filename">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <!-- For convenience, not used by the server, a full path to the file on disk. -->
+                            <xs:attribute type="xs:string" name="LocalFilename" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    
+                    <!-- The MIME type of this file. -->
+                    <xs:element type="xs:string" name="MimeType"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- A definition for the globally unique identifier type Panopto uses. -->
+  <xs:simpleType name="guid">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">
+        The representation of a GUID, generally the id of an element.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
