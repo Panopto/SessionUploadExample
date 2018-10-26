@@ -609,16 +609,18 @@ namespace SessionUploadExample
         /// Given uploadTaget = http[s]://{hostname}/Panopto/Upload/{guid}
         /// and fileName = [{path}\]{fileName}
         /// 
-        /// Return: {guid}\{fileName}
+        /// Return: {guid}/{fileName}
         /// </summary>
         /// <param name="uploadTarget">Upload target returned from the Upload REST API.</param>
         /// <param name="fileName">Local file name.</param>
         /// <returns>Content store file key prefix + file name</returns>
         private static string GetFileKey(string uploadTarget, string fileName)
         {
-            return Path.Combine(
-                GetFileKeyPrefixFromUploadTarget(uploadTarget),
-                Path.GetFileName(fileName));
+            return
+                Path.Combine(
+                    GetFileKeyPrefixFromUploadTarget(uploadTarget),
+                    Path.GetFileName(fileName))
+                    .Replace('\\', '/');
         }
 
         /// <summary>
