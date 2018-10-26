@@ -484,7 +484,7 @@ namespace SessionUploadExample
 
             if (nameValuePair != null)
             {
-                string[] parts = nameValuePair.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                string[] parts = nameValuePair.Split(new char[] { ':' }, 2, StringSplitOptions.RemoveEmptyEntries);
                 if (parts.Length == 2)
                 {
                     value = parts[1];
