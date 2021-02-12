@@ -1,0 +1,6 @@
+/**/.vs/
+/**/obj/
+/**/[Bb]in/
+/**/*.csproj.user
+/**/*.vspscc
+/**/*.vcxproj.user
