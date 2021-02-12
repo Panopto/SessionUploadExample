@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -83,6 +84,9 @@ namespace SessionUploadExample
             {
                 Program.PrintUsageAndExit();
             }
+
+            // Enable SSL 3 / TLS 1.2 support
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls12;
 
             string authCookie = null;
             string serverDns = null;
