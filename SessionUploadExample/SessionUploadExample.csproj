@@ -49,12 +49,15 @@
   <ItemGroup>
     <Compile Include="REST\BaseObject.cs" />
     <Compile Include="Common.cs" />
-    <Compile Include="PanoptoSession.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="REST\SessionUpload.cs" />
     <Compile Include="REST\Upload.cs" />
     <Compile Include="REST\UploadStatus.cs" />
+    <Compile Include="UCS\V1\Extensions.cs" />
+    <Compile Include="UCS\V1\Universal-Capture-v1_0.cs" />
+    <Compile Include="UCS\V2\Extensions.cs" />
+    <Compile Include="UCS\V2\Universal-Capture-v2_0.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -4,6 +4,12 @@ Sample code that shows how to upload complete multi-stream sessions to Panopto.
 Learn more here:
 http://panopto.com/features/universal-capture-specification/
 
+The [UCS code files](SessionUploadExample/UCS) were generated via the following commands:
+```
+xsd Universal-Capture-v1_0.xsd /classes /language:CS /namespace:SessionUploadExample.UCS.V1 /out:SessionUploadExample\UCS\V1\
+xsd Universal-Capture-v2_0.xsd /classes /language:CS /namespace:SessionUploadExample.UCS.V2 /out:SessionUploadExample\UCS\V2\
+```
+
 Sample session XMLs can be found in the "Tests" directory.
 
 SESSION UPLOAD API
