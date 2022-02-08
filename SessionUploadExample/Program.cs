@@ -4,13 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
-using Amazon.S3;
-using Amazon.S3.Model;
+
+using V1Session = SessionUploadExample.UCS.V1.PanoptoSession;
+using V2Session = SessionUploadExample.UCS.V2.Session;
 
 namespace SessionUploadExample
 {
@@ -109,10 +108,10 @@ namespace SessionUploadExample
             Common.IgnoreSSLErrors = ignoreSSLErrors;
 
             Dictionary<string, SessionUpload> uploads = Program.StartUploads(
-                authCookie, 
-                serverDns, 
-                directory, 
-                folderId, 
+                authCookie,
+                serverDns,
+                directory,
+                folderId,
                 continueOnError);
 
             Console.WriteLine("All uploads submitted. Polling for status until all have finished processing.");
@@ -194,23 +193,28 @@ namespace SessionUploadExample
             // collect all XML files in the folder
             string[] xmlFilePaths = Directory.EnumerateFiles(directory, "*.xml", SearchOption.AllDirectories).ToArray();
 
-            // errors encountered while deserializing XML files as PanoptoSessions
+            // errors encountered while deserializing XML files
             Dictionary<string, Exception> deserializationExceptions = new Dictionary<string,Exception>();
 
-            // a collection of all the PanoptoSession XML files found and the list of files that session references
+            // a collection of all the UCS XML files found and the list of files that session references
             Dictionary<string, string[]> referencedFilesByManifest = new Dictionary<string, string[]>();
 
             // try to parse each as a Panopto session
             foreach (string xmlFilePath in xmlFilePaths)
             {
-                PanoptoSession panoptoSession = null;
-                
                 using (FileStream xmlFileStream = File.Open(xmlFilePath, FileMode.Open))
+                using (XmlTextReader xmlReader = new XmlTextReader(xmlFileStream))
                 {
+                    IEnumerable<string> referencedFiles;
                     try
                     {
-                        XmlSerializer deserializer = new XmlSerializer(typeof(PanoptoSession));
-                        panoptoSession = (PanoptoSession)deserializer.Deserialize(xmlFileStream);
+                        XmlSerializer v1deserializer = new XmlSerializer(typeof(V1Session));
+                        XmlSerializer v2deserializer = new XmlSerializer(typeof(V2Session));
+
+                        // collect filenames in the session to see if they exist
+                        referencedFiles = !v1deserializer.CanDeserialize(xmlReader)
+                            ? ((V2Session)v2deserializer.Deserialize(xmlReader)).GetReferencedFiles()
+                            : ((V1Session)v1deserializer.Deserialize(xmlReader)).GetReferencedFiles();
                     }
                     catch (Exception e)
                     {
@@ -218,24 +222,10 @@ namespace SessionUploadExample
                         deserializationExceptions[xmlFilePath] = e;
                         continue;
                     }
+
+                    // record the manifest and related files
+                    referencedFilesByManifest[xmlFilePath] = referencedFiles.ToArray();
                 }
-
-                // collect filenames in the session to see if they exist
-                Dictionary<string, PanoptoSessionPresentation> presentations = (panoptoSession.Presentations != null)
-                    ? panoptoSession.Presentations.ToDictionary(presentation => presentation.Filename.Value)
-                    : new Dictionary<string, PanoptoSessionPresentation>();
-
-                Dictionary<string, PanoptoSessionVideo> streams = (panoptoSession.Videos != null)
-                    ? panoptoSession.Videos.ToDictionary(stream => stream.Filename.Value)
-                    : new Dictionary<string, PanoptoSessionVideo>();
-
-                // create a list of all requisite filenames
-                string[] filesReferencedInSession = presentations.Keys
-                    .Concat(streams.Keys)
-                    .ToArray();
-
-                // record the manifest and related files
-                referencedFilesByManifest[xmlFilePath] = filesReferencedInSession;
             }
 
             // remove any XML files that couldn't be parsed but that are referenced by a PanoptoSession
@@ -385,8 +375,6 @@ namespace SessionUploadExample
             out bool continueOnError,
             out bool ignoreSSLErrors)
         {
-            authCookie = null;
-
             // first try to get arg values from the command-line
             serverDns = Program.GetValueFromArgs(Program.ServerDnsArgumentPrefix, args);
             string username = Program.GetValueFromArgs(Program.UsernameArgumentPrefix, args);
@@ -472,7 +460,7 @@ namespace SessionUploadExample
                 folderIdString = Console.ReadLine();
             }
 
-            folderId = Guid.Parse(folderIdString);            
+            folderId = Guid.Parse(folderIdString);
         }
 
         /// <summary>

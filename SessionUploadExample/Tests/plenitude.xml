@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Session xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/UniversalCaptureSpecification/v1">
+  <Title>Everything Bagel</Title>
+  <Description>A session with every extra feature in the spec (not really but a lot of them)</Description>
+  <Date>2015-01-15T00:00:00.000-00:00</Date>
+  <Thumbnail>hello-world.jpg</Thumbnail>
+  <Videos>
+    <Video>
+      <Start>PT0S</Start>
+      <File>wildlife.wmv</File>
+      <Cuts>
+        <Cut>
+          <Start>PT5S</Start>
+          <Duration>PT5S</Duration>
+        </Cut>
+      </Cuts>
+      <TableOfContents>
+        <Entry>
+          <Title>First TOC entry</Title>
+          <Description>This is the first table of contents entry</Description>
+          <Url/>
+          <Time>PT0S</Time>
+        </Entry>
+        <Entry>
+          <Title>Second TOC entry</Title>
+          <Description>This is the second table of contents entry </Description>
+          <Url/>
+          <Time>PT15S</Time>
+        </Entry>
+      </TableOfContents>
+      <Transcripts>
+        <Transcript>
+          <File>aristotle.txt</File>
+          <LCID>en-US</LCID>
+          <Source>Dummy Provider</Source>
+          <Visible>true</Visible>
+        </Transcript>
+      </Transcripts>
+    </Video>
+  </Videos>
+  <Presentations>
+    <Presentation>
+      <Start>PT0S</Start>
+      <File>test.pptx</File>
+      <SlideChanges>
+        <SlideChange>
+          <Title>Title slide</Title>
+          <Description/>
+          <Url/>
+          <Time>PT2S</Time>
+          <SlideNumber>1</SlideNumber>
+        </SlideChange>
+        <SlideChange>
+          <Title>A picture of a dog</Title>
+          <Description/>
+          <Url/>
+          <Time>PT17S</Time>
+          <SlideNumber>2</SlideNumber>
+        </SlideChange>
+      </SlideChanges>
+    </Presentation>
+  </Presentations>
+  <Cuts>
+    <Cut>
+      <Start>PT25S</Start>
+      <Duration>PT4S</Duration>
+    </Cut>
+  </Cuts>
+  <Tags>
+    <Tag>Everything</Tag>
+    <Tag>Bagel</Tag>
+  </Tags>
+  <Attachments>
+    <Attachment>
+      <File>Universal-Capture-v1_0.pdf</File>
+      <MimeType>application/pdf</MimeType>
+    </Attachment>
+  </Attachments>
+</Session>
