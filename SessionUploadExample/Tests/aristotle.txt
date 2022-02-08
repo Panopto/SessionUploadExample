@@ -1,0 +1,276 @@
+1
+00:00:00,000 --> 00:00:05,000
+Every art and every inquiry, and similarly every action and pursuit,
+
+2
+00:00:05,000 --> 00:00:10,000
+is thought to aim at some good; and for this reason the good
+
+3
+00:00:10,000 --> 00:00:15,000
+has rightly been declared to be that at which all
+
+4
+00:00:15,000 --> 00:00:20,000
+things aim. But a certain difference is found among ends; some are activities, others are products apart
+
+5
+00:00:20,000 --> 00:00:25,000
+from the activities that produce them. Where there are ends apart
+
+6
+00:00:25,000 --> 00:00:30,000
+from the actions, it is the nature of the products
+
+7
+00:00:30,000 --> 00:00:35,000
+to be better than the activities. Now, as there are many actions, arts, and sciences, their ends
+
+8
+00:00:35,000 --> 00:00:40,000
+also are many; the end of the medical art is health, that of shipbuilding a
+
+9
+00:00:40,000 --> 00:00:45,000
+vessel, that of strategy victory, that of economics wealth. But where such arts fall
+
+10
+00:00:45,000 --> 00:00:50,000
+under a single capacity- as bridle-making and the other arts concerned with the equipment
+
+11
+00:00:50,000 --> 00:00:55,000
+of horses fall under the art of riding, and this and every
+
+12
+00:00:55,000 --> 00:01:00,000
+military action under strategy, in the same way other arts fall under yet others- in all of these the
+
+13
+00:01:00,000 --> 00:01:05,000
+ends of the master arts are to be preferred to all the
+
+14
+00:01:05,000 --> 00:01:10,000
+subordinate ends; for it is for the sake of the former that the
+
+15
+00:01:10,000 --> 00:01:15,000
+latter are pursued. It makes no difference whether the activities themselves are the ends of the actions,
+
+16
+00:01:15,000 --> 00:01:20,000
+or something else apart from the activities, as in the case of the sciences
+
+17
+00:01:20,000 --> 00:01:25,000
+just mentioned. If, then, there is some end of the
+
+18
+00:01:25,000 --> 00:01:30,000
+things we do, which we desire for its own sake (everything else being
+
+19
+00:01:30,000 --> 00:01:35,000
+desired for the sake of this), and if we do not
+
+20
+00:01:35,000 --> 00:01:40,000
+choose everything for the sake of something else (for at that
+
+21
+00:01:40,000 --> 00:01:45,000
+rate the process would go on to infinity, so that our desire would be empty
+
+22
+00:01:45,000 --> 00:01:50,000
+and vain), clearly this must be the good and the chief
+
+23
+00:01:50,000 --> 00:01:55,000
+good. Will not the knowledge of it, then, have a great influence
+
+24
+00:01:55,000 --> 00:02:00,000
+on life? Shall we not, like archers who have a
+
+25
+00:02:00,000 --> 00:02:05,000
+mark to aim at, be more likely to hit upon
+
+26
+00:02:05,000 --> 00:02:10,000
+what is right? If so, we must try, in outline at least, to determine what it is,
+
+27
+00:02:10,000 --> 00:02:15,000
+and of which of the sciences or capacities it is the
+
+28
+00:02:15,000 --> 00:02:20,000
+object. It would seem to belong to the most authoritative art and that
+
+29
+00:02:20,000 --> 00:02:25,000
+which is most truly the master art. And politics appears
+
+30
+00:02:25,000 --> 00:02:30,000
+to be of this nature; for it is this that ordains which of the sciences should be studied
+
+31
+00:02:30,000 --> 00:02:35,000
+in a state, and which each class of citizens should learn and up to what point they
+
+32
+00:02:35,000 --> 00:02:40,000
+should learn them; and we see even the most highly esteemed of capacities to fall under this,
+
+33
+00:02:40,000 --> 00:02:45,000
+e.g. strategy, economics, rhetoric; now, since politics uses the rest of the sciences, and since,
+
+34
+00:02:45,000 --> 00:02:50,000
+again, it legislates as to what we are to do and what we are to
+
+35
+00:02:50,000 --> 00:02:55,000
+abstain from, the end of this science must include those of the others, so that this
+
+36
+00:02:55,000 --> 00:03:00,000
+end must be the good for man. For even if the
+
+37
+00:03:00,000 --> 00:03:05,000
+end is the same for a single man and for a state, that of the state seems at all
+
+38
+00:03:05,000 --> 00:03:10,000
+events something greater and more complete whether to attain or to preserve; though it is worth while
+
+39
+00:03:10,000 --> 00:03:15,000
+to attain the end merely for one man, it is finer and more godlike to attain it for
+
+40
+00:03:15,000 --> 00:03:20,000
+a nation or for city-states. These, then, are the ends at which
+
+41
+00:03:20,000 --> 00:03:25,000
+our inquiry aims, since it is political science, in one
+
+42
+00:03:25,000 --> 00:03:30,000
+sense of that term. Our discussion will be adequate if it has as much clearness as the subject-matter admits
+
+43
+00:03:30,000 --> 00:03:35,000
+of, for precision is not to be sought for alike in all discussions, any
+
+44
+00:03:35,000 --> 00:03:40,000
+more than in all the products of the crafts. Now fine and
+
+45
+00:03:40,000 --> 00:03:45,000
+just actions, which political science investigates, admit of much variety and fluctuation
+
+46
+00:03:45,000 --> 00:03:50,000
+of opinion, so that they may be thought to exist only by convention, and not by nature. And
+
+47
+00:03:50,000 --> 00:03:55,000
+goods also give rise to a similar fluctuation because they bring harm to many people; for before
+
+48
+00:03:55,000 --> 00:04:00,000
+now men have been undone by reason of their wealth, and others by reason of their courage. We
+
+49
+00:04:00,000 --> 00:04:05,000
+must be content, then, in speaking of such subjects and with such premisses
+
+50
+00:04:05,000 --> 00:04:10,000
+to indicate the truth roughly and in outline, and in
+
+51
+00:04:10,000 --> 00:04:15,000
+speaking about things which are only for the most part true
+
+52
+00:04:15,000 --> 00:04:20,000
+and with premisses of the same kind to reach conclusions that are no better. In the same spirit,
+
+53
+00:04:20,000 --> 00:04:25,000
+therefore, should each type of statement be received; for it
+
+54
+00:04:25,000 --> 00:04:30,000
+is the mark of an educated man to look for precision in each class
+
+55
+00:04:30,000 --> 00:04:35,000
+of things just so far as the nature of the subject admits; it is evidently
+
+56
+00:04:35,000 --> 00:04:40,000
+equally foolish to accept probable reasoning from a mathematician and
+
+57
+00:04:40,000 --> 00:04:45,000
+to demand from a rhetorician scientific proofs. Now each man
+
+58
+00:04:45,000 --> 00:04:50,000
+judges well the things he knows, and of these he is a good judge. And so the man who
+
+59
+00:04:50,000 --> 00:04:55,000
+has been educated in a subject is a good judge of that subject, and the man
+
+60
+00:04:55,000 --> 00:05:00,000
+who has received an all-round education is a good judge in general. Hence a
+
+61
+00:05:00,000 --> 00:05:05,000
+young man is not a proper hearer of lectures on political science; for he is inexperienced in the
+
+62
+00:05:05,000 --> 00:05:10,000
+actions that occur in life, but its discussions start from these and are about
+
+63
+00:05:10,000 --> 00:05:15,000
+these; and, further, since he tends to follow his passions, his study will be vain
+
+64
+00:05:15,000 --> 00:05:20,000
+and unprofitable, because the end aimed at is not knowledge but action. And it makes
+
+65
+00:05:20,000 --> 00:05:25,000
+no difference whether he is young in years or youthful in character; the defect does not
+
+66
+00:05:25,000 --> 00:05:30,000
+depend on time, but on his living, and pursuing each successive object, as passion
+
+67
+00:05:30,000 --> 00:05:35,000
+directs. For to such persons, as to the incontinent, knowledge brings no profit; but
+
+68
+00:05:35,000 --> 00:05:40,000
+to those who desire and act in accordance with a rational principle knowledge about such matters will
+
+69
+00:05:40,000 --> 00:05:45,000
+be of great benefit. These remarks about the student, the sort of treatment to be expected, and
+

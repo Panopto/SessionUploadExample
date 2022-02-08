@@ -63,19 +63,28 @@
     <None Include="App.config" />
     <None Include="Tests\run_tests.bat" />
     <None Include="Tests\test.pptx" />
+    <None Include="Tests\Universal-Capture-v1_0.pdf" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Tests\aristotle.txt" />
     <Content Include="Tests\audio_only.xml" />
     <Content Include="Tests\corrupt_video.wmv" />
+    <Content Include="Tests\dwarf_fortress-Börkur Eiríksson.jpg" />
     <Content Include="Tests\error_corrupt_video.xml" />
     <Content Include="Tests\error_invalid_schema.xml" />
     <Content Include="Tests\error_missing_files.xml" />
     <Content Include="Tests\error_unsupported_features.xml" />
     <Content Include="Tests\expected_results.txt" />
+    <Content Include="Tests\malformed_tag_contents.xml" />
+    <Content Include="Tests\plenitude.xml" />
     <Content Include="Tests\ppt_only.xml" />
     <Content Include="Tests\primary_and_secondary_videos_and_ppt_and_cuts.xml" />
+    <Content Include="Tests\primary_audio_secondary_video.xml" />
+    <Content Include="Tests\primary_video_ppt.xml" />
+    <Content Include="Tests\secondary_only.xml" />
     <Content Include="Tests\song.mp3" />
+    <Content Include="Tests\video_only.xml" />
     <Content Include="Tests\wildlife.wmv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
