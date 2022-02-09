@@ -81,7 +81,7 @@ enum UploadStatus
 }
 
 
-To initiate the upload, make an HTTP POST with a JSON body of a SessionUpload object with the FolderId field populated. This is the folder id to create a new session in. The folder id can be found via the SessionManagement.GetFoldersList API: https://support.panopto.com/pages/PanoptoApiHelp/html/e96ef9df-0cfa-2f92-3571-308f25e9c2d0.htm
+To initiate the upload, make an HTTP POST with a JSON body of a SessionUpload object with the FolderId field populated. This is the folder id to create a new session in. The folder id can be found via the SessionManagement.GetFoldersList API: https://support.panopto.com/resource/APIDocumentation/Help/index.html (Panopto.Server.Services.PublicAPI.V46.Soap -> ISessionManagement Interface -> ISessionManagement Methods -> GetFoldersList)
 
 The response to the HTTP POST will contain a URL in UploadTarget, as well as an ID to use for subsequent REST calls.
 
@@ -138,7 +138,7 @@ enum StreamType
 }
 
 
-To initiate the upload, make an HTTP POST with a JSON body of a StreamUpload object with the SessionId field populated. The StreamType and StreamStartTime fields are optional. This is the session id to create a new stream on. The session id can be found via the SessionManagement.GetSessionsList API: https://support.panopto.com/pages/PanoptoApiHelp/html/b915412a-63cd-5c48-7369-6775dfcdf94b.htm
+To initiate the upload, make an HTTP POST with a JSON body of a StreamUpload object with the SessionId field populated. The StreamType and StreamStartTime fields are optional. This is the session id to create a new stream on. The session id can be found via the SessionManagement.GetSessionsList API: https://support.panopto.com/resource/APIDocumentation/Help/index.html (Panopto.Server.Services.PublicAPI.V46.Soap -> ISessionManagement Interface -> ISessionManagement Methods -> GetSessionsList)
 
 The response to the HTTP POST will contain a URL in UploadTarget, as well as an ID to use for subsequent REST calls.
 
